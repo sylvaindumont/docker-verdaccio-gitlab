@@ -8,7 +8,7 @@ RUN apk add --quiet --no-cache --virtual .gyp \
     git \
     && \
     npm config set registry http://registry.npmjs.org/ && \
-    yarn global add verdaccio@2.7.4 && \
+    yarn global add verdaccio && \
     yarn global add verdaccio-gitlab@latest && \
     yarn cache clean && \
     apk --quiet del .gyp && \
