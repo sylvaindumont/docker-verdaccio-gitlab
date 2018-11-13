@@ -1,4 +1,4 @@
-FROM node:8-alpine
+FROM node:10-alpine
 
 ENV NODE_ENV production
 
@@ -16,8 +16,6 @@ RUN apk add --quiet --no-cache --virtual .gyp \
     chown -R node:node /verdaccio
 
 ADD https://raw.githubusercontent.com/verdaccio/verdaccio/master/conf/docker.yaml /verdaccio/conf/config.yaml
-
-USER node
 
 VOLUME ["/verdaccio/storage"]
 
